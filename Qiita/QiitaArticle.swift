@@ -9,6 +9,10 @@ import Foundation
 
 struct QiitaArticle: Codable {
     let title: String
+    let body: String
+    let created_at: String
+//    let tags: [String]?
+//    let user: String
     let url: String
     let likes_count: Int
     let stocks_count: Int
