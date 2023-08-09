@@ -22,21 +22,30 @@ struct QiitaDetailView: View {
                     Text(createdAt)
                         .foregroundColor(Color.gray)
                         .font(.caption)
+                        .padding(.bottom)
+                        .padding(.leading)
                     HStack (alignment: .firstTextBaseline) {
                         HStack {
                             Image(systemName: "heart")
                             Text("\(likesCount)")
+                                .padding(.trailing)
                         }
                         HStack {
                             Image(systemName: "square.and.arrow.down")
                             Text("\(stockesCount)")
+                                .padding(.trailing)
                         }
                         HStack {
                             Image(systemName: "eye")
                             Text("\(pageViewCount)")
+                                .padding(.trailing)
                         }
                     }
+                    .padding(.bottom)
+                    .padding(.leading)
                     Text(bodyContent)
+                        .padding(.bottom)
+                        .padding(.leading)
                     Text(url)
                 }
             }
