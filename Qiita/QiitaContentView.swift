@@ -30,6 +30,7 @@ struct QiitaContentView: View {
                                 Text(viewModel.articles[index].created_at)
                                     .foregroundColor(Color.gray)
                                     .font(.caption)
+                                    .padding(.top)
                                 HStack {
                                     HStack {
                                         Image(systemName: "heart")
@@ -54,7 +55,7 @@ struct QiitaContentView: View {
                     }
                 }
             }
-            .navigationTitle("最新記事")
+            .navigationTitle("Qiita 最新記事")
         }
     }
 }

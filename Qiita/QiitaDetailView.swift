@@ -47,6 +47,8 @@ struct QiitaDetailView: View {
                         .padding(.bottom)
                         .padding(.leading)
                     Text(url)
+                        .padding(.leading)
+                        .padding(.bottom)
                 }
             }
             .navigationTitle(title)
