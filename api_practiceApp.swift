@@ -11,7 +11,7 @@ import SwiftUI
 struct api_practiceApp: App {
     var body: some Scene {
         WindowGroup {
-            QiitaContentView()
+            GitHubContentView()
         }
     }
 }

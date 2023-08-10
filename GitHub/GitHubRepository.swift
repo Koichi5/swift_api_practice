@@ -5,30 +5,16 @@
 //  Created by Koichi Kishimoto on 2023/08/10.
 //
 
-import Foundation
-
-struct Repositories: Codable {
-    let items: [Repository]
-}
-
-struct Repository: Codable {
+struct GitHubRepository: Codable, Identifiable, Equatable {
+    let id: Int
     let name: String
-    let fullName: String
-    let language: String?
-    let stargazersCount: Int
-    let watchersCount: Int
-    let forksCount: Int
-    let openIssuesCount: Int
     let description: String?
-
-    let owner: Owner
-
-    var avatarImageUrl: URL? {
-        return URL(string: owner.avatarUrl)
+    let stargazersCount: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case description
+        case stargazersCount = "stargazers_count"
     }
-}
-
-struct Owner: Codable {
-    let avatarUrl: String
-    let login: String
 }
