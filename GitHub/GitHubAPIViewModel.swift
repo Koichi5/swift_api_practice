@@ -12,7 +12,7 @@ struct GithubSearchResult: Codable {
 }
 
 class GithubAPIViewModel {
-    static func searchRepos(word: String, page: Int, perPage: Int) -> AnyPublisher<[GitHubRepository], Error> {
+    static func searchRepositories(word: String, page: Int, perPage: Int) -> AnyPublisher<[GitHubRepository], Error> {
         let url = URL(string: "https://api.github.com/search/repositories?q=\(word)&sort=stars&page=\(page)&per_page=\(perPage)")!
         return URLSession.shared
             .dataTaskPublisher(for: url)
